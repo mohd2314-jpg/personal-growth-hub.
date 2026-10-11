@@ -1,0 +1,43 @@
+name: Daily Growth Digest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-growth-digest
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate digest
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_MODEL: Qwen/Qwen3.5-9B
+        run: python generate.py
+      - name: Commit updated digest
+        run: |
+          git config user.name "growth-hub-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily.json
+          if git diff --cached --quiet; then
+            echo "No digest changes to commit"
+          else
+            git commit -m "Update daily growth digest"
+            git push
+          fi
