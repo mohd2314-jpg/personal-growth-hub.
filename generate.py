@@ -55,7 +55,7 @@ def call_model(prompt):
             {"role": "user", "content": prompt},
         ],
         "temperature": 0.6,
-        "max_tokens": 1800,
+        "max_tokens": 4000,
     }
     response = requests.post(HF_URL, headers=headers, json=payload, timeout=120)
     if response.status_code >= 400:
