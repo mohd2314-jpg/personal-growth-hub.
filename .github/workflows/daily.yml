@@ -27,7 +27,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Generate digest
         env:
-                    GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.8-flash
         run: python generate.py
       - name: Commit updated digest
