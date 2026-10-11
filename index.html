@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1015">
+  <meta name="description" content="A quiet daily hub for psychology, charisma, engineering insight and GATE ECE practice.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <title>Continental · Growth Hub</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1015;--panel:#111a22;--line:#24313b;--text:#e8f0f5;--muted:#92a4b1;--cyan:#71d9ed;--red:#f05269}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+    header{padding:calc(22px + env(safe-area-inset-top)) 18px 20px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#111c25,#0b1015 70%)}
+    .wrap{max-width:760px;margin:auto}
+    .eyebrow{font-size:.72rem;letter-spacing:.18em;color:var(--cyan);font-weight:750}
+    h1{font-size:1.55rem;margin:.35rem 0 .2rem;letter-spacing:.03em}
+    .sub,.muted{color:var(--muted);font-size:.9rem}
+    main{padding:16px;max-width:792px;margin:auto}
+    .toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+    button{border:1px solid var(--line);background:#14212b;color:var(--text);padding:10px 13px;border-radius:12px;font:inherit;font-size:.86rem}
+    button:active{transform:scale(.98)}
+    nav{display:flex;gap:8px;overflow:auto;padding:2px 0 14px;scrollbar-width:none}
+    nav button{white-space:nowrap}
+    nav button.active{border-color:var(--cyan);color:var(--cyan)}
+    article{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:0 0 12px}
+    h2{font-size:1.12rem;margin:0 0 10px}
+    h3{font-size:.98rem;margin:18px 0 6px;color:var(--cyan)}
+    p{margin:.55rem 0}
+    a{color:var(--cyan);overflow-wrap:anywhere}
+    .tag{font-size:.72rem;color:var(--red);letter-spacing:.1em;font-weight:700}
+    .quote{font-size:1.15rem;line-height:1.45}
+    .hidden{display:none}
+    .notice{padding:12px;border:1px dashed var(--line);border-radius:12px;color:var(--muted)}
+    footer{padding:20px 16px calc(28px + env(safe-area-inset-bottom));text-align:center;color:var(--muted);font-size:.78rem}
+    ul{padding-left:1.25rem}
+  </style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">DISCIPLINE · KNOWLEDGE · EXECUTION</div>
+  <h1>CONTINENTAL</h1>
+  <div class="sub">PERSONAL GROWTH HUB</div>
+</div></header>
+<main>
+  <div class="toolbar">
+    <div><strong id="today">Today's digest</strong><div class="muted" id="status">Loading saved reading…</div></div>
+    <button id="refresh">Refresh digest ↻</button>
+  </div>
+  <nav id="tabs" aria-label="Reading sections">
+    <button class="active" data-section="overview">Overview</button>
+    <button data-section="psychology">Psychology</button>
+    <button data-section="charisma">Charisma</button>
+    <button data-section="briefing">Briefing</button>
+    <button data-section="gate">GATE ECE</button>
+    <button data-section="review">Weekly review</button>
+  </nav>
+  <section id="overview">
+    <article><div class="tag">DAILY QUOTE</div><p class="quote" id="quote">Small actions compound.</p><p class="muted">Original daily line · not attributed to a public figure</p></article>
+    <article><h2>Today's mission</h2><ul><li>Read one psychology idea.</li><li>Practise one conversation skill.</li><li>Solve one GATE question.</li></ul></article>
+    <article><h2>Daily reading</h2><p>Choose a section above. Keep the goal small enough to repeat tomorrow.</p></article>
+  </section>
+  <section id="psychology" class="hidden"><article id="psychologyCard"><h2>Psychology</h2><p class="muted">Your lesson will appear here.</p></article></section>
+  <section id="charisma" class="hidden"><article id="charismaCard"><h2>Charisma drill</h2><p class="muted">Your exercise will appear here.</p></article></section>
+  <section id="briefing" class="hidden"><article id="briefingCard"><h2>Daily briefing</h2><p class="muted">Evergreen engineering and decision-making insight.</p></article></section>
+  <section id="gate" class="hidden"><article id="gateCard"><h2>GATE ECE</h2><p class="muted">A verified PYQ and solution will appear here when you configure the source bank.</p></article></section>
+  <section id="review" class="hidden"><article id="reviewCard"><h2>Weekly review</h2><p class="muted">Your Sunday review will appear here.</p></article></section>
+  <div class="notice" id="offlineNote">The latest digest is saved on this device after it has loaded once. Refresh needs an internet connection.</div>
+</main>
+<footer>Built for consistency, not endless scrolling.</footer>
+<script>
+const $=id=>document.getElementById(id);
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function paragraphs(v){return String(v??"").split(/\n{2,}/).map(p=>`<p>${esc(p).replace(/\n/g,"<br>")}</p>`).join("")}
+function renderCard(id,title,obj){
+  if(!obj){$(id).innerHTML=`<h2>${esc(title)}</h2><p class="muted">No content yet.</p>`;return}
+  let html=`<h2>${esc(obj.title||title)}</h2>`;
+  for(const [key,label] of [["explanation","The idea"],["real_life_example","Example"],["example","Example"],["exercise","Try this"],["sample_line","Try saying"],["reflection_question","Reflect"],["takeaway","Takeaway"],["solution","Worked solution"],["weekly_review","Review"]]){
+    if(obj[key]) html+=`<h3>${label}</h3>${paragraphs(obj[key])}`;
+  }
+  if(obj.question) html+=`<h3>Question</h3>${paragraphs(obj.question)}`;
+  if(obj.options && typeof obj.options==="object") html+=`<h3>Options</h3><ul>${Object.entries(obj.options).map(([k,v])=>`<li><b>${esc(k)}.</b> ${esc(v)}</li>`).join("")}</ul>`;
+  if(obj.answer) html+=`<h3>Answer</h3><p>${esc(obj.answer)}</p>`;
+  if(obj.topic) html+=`<p class="muted">Topic: ${esc(obj.topic)}${obj.year?` · ${esc(obj.year)}`:""}${obj.paper?` · ${esc(obj.paper)}`:""}</p>`;
+  if(obj.official_source_url && obj.official_source_url.startsWith("https://")) html+=`<p><a href="${esc(obj.official_source_url)}" target="_blank" rel="noopener">Open official source ↗</a></p>`;
+  if(obj.explanation===undefined && obj.solution===undefined && obj.exercise===undefined && obj.takeaway===undefined && obj.question===undefined) {
+    for(const [k,v] of Object.entries(obj)) if(typeof v==="string" && !["title","official_source_url","topic","answer","year","paper"].includes(k)) html+=`<p>${esc(v)}</p>`;
+  }
+  $(id).innerHTML=html;
+}
+function render(d){
+  $("today").textContent=d.date||"Today's digest";
+  $("status").textContent=`Generated ${d.generated_at_utc?new Date(d.generated_at_utc).toLocaleString():"digest"} · ${d.model||"saved copy"}`;
+  $("quote").textContent=d.quote?.text||d.quote||"Small actions compound.";
+  renderCard("psychologyCard","Psychology",d.psychology);
+  renderCard("charismaCard","Charisma drill",d.charisma_drill);
+  renderCard("briefingCard","Daily briefing",d.briefing);
+  renderCard("gateCard","GATE ECE",d.gate_pyq);
+  renderCard("reviewCard","Weekly review",d.weekly_review?{title:"Weekly review",explanation:d.weekly_review}:{title:"Weekly review",explanation:"Your review appears on Sundays."});
+  localStorage.setItem("growthHubDigest",JSON.stringify(d));
+}
+async function load(remote=true){
+  if(!remote){const saved=localStorage.getItem("growthHubDigest");if(saved){render(JSON.parse(saved));$("status").textContent="Saved digest · offline-ready";return}}
+  try{
+    const r=await fetch("./daily.json?ts="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw new Error("No digest published yet");
+    const d=await r.json();render(d);$("offlineNote").textContent="Latest digest saved on this device. Refresh when online to check for new content.";
+  }catch(e){
+    const saved=localStorage.getItem("growthHubDigest");
+    if(saved){render(JSON.parse(saved));$("status").textContent="Showing saved digest · offline";$("offlineNote").textContent="Offline mode: showing the last saved digest."}
+    else {$("status").textContent="No digest yet";$("offlineNote").textContent="Run the GitHub Actions workflow once to generate the first digest."}
+  }
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x===b));
+  document.querySelectorAll("main section").forEach(s=>s.classList.toggle("hidden",s.id!==b.dataset.section));
+}));
+$("refresh").addEventListener("click",()=>load(true));
+if("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+load(false).then(()=>load(true));
+</script>
+</body></html>
