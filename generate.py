@@ -9,7 +9,7 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).resolve().parent
-DOCS = ROOT / "docs"
+DOCS = ROOT
 PYQS_PATH = ROOT / "data" / "pyqs.json"
 OUT_PATH = DOCS / "daily.json"
 HF_TOKEN = os.getenv("HF_TOKEN", "").strip()
