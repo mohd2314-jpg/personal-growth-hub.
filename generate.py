@@ -10,11 +10,11 @@ import requests
 
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT
-PYQS_PATH = ROOT / "data" / "pyqs.json"
+PYQS_PATH = ROOT / "pyqs.json"
 OUT_PATH = DOCS / "daily.json"
-HF_TOKEN = os.getenv("HF_TOKEN", "").strip()
-HF_MODEL = os.getenv("HF_MODEL", "Qwen/Qwen3.5-9B").strip()
-HF_URL = "https://router.huggingface.co/v1/chat/completions"
+HF_TOKEN = os.getenv("GEMINI_API_KEY", "").strip()
+HF_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
+HF_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
 def load_pyqs():
     if not PYQS_PATH.exists():
