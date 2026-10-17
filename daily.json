@@ -1,21 +1,33 @@
 {
-  "date": "Not generated yet",
-  "quote": "Small actions compound.",
+  "date": "2026-10-17",
+  "quote": "Discipline is rarely a burst of force; it is simply removing the friction between your intent and your next action.",
   "psychology": {
-    "title": "First-run setup",
-    "explanation": "Run the Daily Growth Digest workflow from the GitHub Actions tab to generate your first digest."
+    "title": "Implementation Intentions: Closing the Gap Between Plan and Action",
+    "explanation": [
+      "Deciding to study or work on a difficult task often fails because the intention is too abstract. When an objective is framed broadly—such as 'I will practice network analysis this evening'—the brain must continuously negotiate when, where, and how to begin. This cognitive negotiation usually occurs when mental energy is lowest, leading to avoidance.",
+      "Psychologist Peter Gollwitzer's research on 'implementation intentions' demonstrates that framing intentions as conditional statements ('If situation X arises, then I will perform response Y') significantly increases follow-through. By linking a specific situational cue to a pre-decided response, the cognitive load of decision-making is delegated to environmental triggers.",
+      "This strategy does not rely on emotional motivation or willpower. Instead, it creates an automatic mental association: when the predetermined condition occurs, the planned behavior is activated with reduced deliberation, making procrastination substantially harder to justify."
+    ],
+    "real_life_example": "Instead of telling yourself, 'I need to solve 15 problems on op-amps after college,' you specify: 'If the clock hits 6:30 PM and I sit at my desk with tea, then I will open the workbook directly to Chapter 4 without checking my phone.'",
+    "exercise": "Write down two 'If–Then' rules for your primary study block today. Ensure the 'If' describes an unmistakable physical trigger (time, location, preceding habit) and the 'Then' describes an immediate, concrete micro-action."
   },
   "charisma_drill": {
-    "title": "First-run setup",
-    "exercise": "Ask one genuine follow-up question in your next conversation."
+    "exercise": "The Summarize-and-Validate Drill",
+    "instruction": "During a technical discussion, lab session, or casual conversation, resist the urge to immediately offer your counterpoint or solution. First, restate the core constraint or concern of the other person in your own words before advancing your perspective.",
+    "sample_line": "If I understand correctly, your main concern with this design is that the propagation delay might violate our timing margin at higher clock frequencies—is that accurate?",
+    "reflection_question": "Did taking five seconds to summarize reduce defensive pushback and make the other person more receptive to your follow-up ideas?"
   },
   "briefing": {
-    "title": "Engineering mindset",
-    "takeaway": "Build a repeatable system before adding complexity."
+    "title": "Conceptual Technical Debt in Engineering Foundations",
+    "insight": "In systems engineering, technical debt refers to the implied cost of rework caused by choosing an easy, fast solution now instead of a better approach that takes longer. Students incur a similar 'conceptual debt' when they memorize algorithmic recipes or formulas (such as two-port parameter conversions or Bode plot shortcuts) without understanding the governing physics or derivations.",
+    "practical_takeaway": "When revising core ECE subjects, resist treating formulas as black boxes. If you cannot explain why a formula holds true from first principles (e.g., KCL/KVL or boundary conditions), mark it as debt and spend 20 minutes deriving it. Paying down conceptual debt early prevents compounding confusion in multi-topic exam problems."
   },
   "gate_pyq": {
     "title": "Verified GATE PYQ not configured",
-    "explanation": "Add a real question and official answer-key source to data/pyqs.json. The system deliberately will not fabricate an official PYQ."
+    "explanation": "Add a real question and official answer-key source to data/pyqs.json. The system deliberately will not fabricate an official PYQ.",
+    "official_source_url": ""
   },
-  "weekly_review": ""
+  "weekly_review": "",
+  "generated_at_utc": "2026-10-17T05:38:21.117759+00:00",
+  "model": "gemini-3.8-flash"
 }
