@@ -1,28 +1,35 @@
 {
-  "date": "2026-10-24",
-  "quote": "Clarity is not found by waiting for inspiration; it is constructed through systematic, deliberate action.",
+  "date": "2026-10-25",
+  "quote": "Clarity is not found by waiting for certainty; it is built through steady, honest iteration.",
   "psychology": {
-    "title": "Implementation Intentions and Habit Automation",
-    "explanation": "Many students struggle with academic consistency not because they lack motivation, but because their goals are stated too abstractly. Setting an intention such as 'I need to study Signals and Systems this evening' leaves room for decision fatigue, procrastination, and environmental distractions.\n\nPsychological research pioneered by Peter Gollwitzer highlights the efficacy of 'implementation intentions'—framing plans explicitly as 'If [Situation X occurs], then I will [perform Action Y]'. This bridges the intention-behavior gap by pre-loading the decision into memory.\n\nWhen a specific cue in your environment triggers an automatic response, the cognitive load required to start studying drops significantly. You bypass the internal negotiation about whether you feel ready, shifting your focus directly to the execution.",
-    "real_life_example": "Instead of telling yourself you will practice GATE problems after lab class, you commit to: 'If the clock strikes 6:00 PM and I sit at my desk, then I will open my Communication Systems workbook and solve the first three unattempted problems without checking my phone.'",
-    "exercise": "Write down two 'If-Then' statements for your most avoided academic task today. Clearly identify an undeniable environmental trigger (a specific time, location, or completed event) and the precise next action."
+    "title": "The Peak-End Rule in Learning Motivation",
+    "explanation": "The peak-end rule is a cognitive heuristic described in psychological research showing that people tend to judge an experience largely based on how it felt at its peak (the most intense point) and at its end, rather than on the total sum or average of every moment.\n\nIn rigorous academic prep, long study sessions often conclude in cognitive exhaustion or frustration from hitting an impasse on a difficult problem. When a study block ends on a note of defeat, your working memory encodes the entire three-hour block as punishing and unpleasant.\n\nOver days and weeks, this negative emotional tag generates anticipatory dread. You begin to delay opening your textbooks not because the material is impossible, but because your brain anticipates the unpleasant exit state from the previous session.",
+    "example": "You spend two productive hours deriving frequency responses, but spend the final 30 minutes stuck on an intricate stability criterion until you shut your laptop in frustration. The next day, you feel strong resistance to starting your revision.",
+    "exercise": "End study blocks by design, not by collapse. Reserve the final 7–10 minutes of every session to step back from raw problem-solving. Review two concepts you understood well, organize your notes, and write down the exact starting point for tomorrow."
   },
   "charisma_drill": {
-    "exercise": "The Perspective-Check Echo: Before answering a classmate or professor, briefly mirror the core premise of what they just said in your own words to verify mutual understanding.",
-    "sample_line": "If I understand correctly, you are saying that increasing the filter order here improves roll-off but introduces unacceptable phase distortion. Is that your main concern?",
-    "reflection_question": "Did taking five seconds to summarize their point make the other person visibly more receptive to your counter-perspective?"
+    "drill": "The Clarifying Restatement",
+    "description": "Before presenting your viewpoint or solution in a technical discussion, restate the other person's core idea in one concise sentence to ensure alignment.",
+    "sample_line": "It sounds like your main concern with this topology is the thermal budget rather than the board area—did I catch that correctly?",
+    "reflection_question": "Did taking five seconds to confirm their perspective reduce friction and invite more constructive dialogue?"
   },
   "briefing": {
-    "topic": "The Principle of Impedance Matching in Personal Bandwidth",
-    "insight": "In radio frequency and electronics, maximum power transfer occurs when the load impedance matches the source impedance. When there is a mismatch, signal reflections cause energy dissipation and signal degradation. Similarly, cognitive overload occurs when you attempt to push high-bandwidth, dense theoretical learning through a depleted physiological state. Forcing advanced multi-variable calculus or semiconductor physics when mentally drained results in low retention and high frustration.",
-    "takeaway": "Match the cognitive load of your task to your current mental impedance: schedule deep conceptual derivation during peak alertness, and reserve administrative, organizational, or basic formula revision tasks for low-energy windows."
+    "topic": "Graceful Degradation vs. Catastrophic Failure",
+    "insight": "In dependable electronics and communications systems, designs favor graceful degradation: when a subsystem fails or bandwidth drops, the system reduces functionality smoothly instead of suffering a complete outage. Engineering students often apply a brittle, binary model to their daily habits—treating an interrupted morning or an unread chapter as justification to discard the rest of the day.",
+    "takeaway": "Design a 'low-power mode' for your study plan. On days packed with lab exams or exhaustion, drop to a non-negotiable minimum (such as 25 minutes of core formula derivation) rather than allowing a total operational collapse."
   },
   "gate_pyq": {
     "title": "Verified GATE PYQ not configured",
     "explanation": "Add a real question and official answer-key source to data/pyqs.json. The system deliberately will not fabricate an official PYQ.",
     "official_source_url": ""
   },
-  "weekly_review": "",
-  "generated_at_utc": "2026-10-24T05:57:23.917861+00:00",
+  "weekly_review": [
+    "Which ECE topic felt solid this week, and which concept still relies on superficial memorization rather than first-principles understanding?",
+    "Did you maintain consistent daily study minimums, or did unexpected schedule changes cause complete drop-offs?",
+    "In your lab or team discussions, did you prioritize clear, respectful listening before advocating your own technical ideas?",
+    "Did you structure your study sessions to end on a resolved, organized note, or did you work until burnout?",
+    "What is the single highest-leverage adjustment you need to make to your environment or schedule for the upcoming week?"
+  ],
+  "generated_at_utc": "2026-10-25T06:12:08.875971+00:00",
   "model": "gemini-3.8-flash"
 }
