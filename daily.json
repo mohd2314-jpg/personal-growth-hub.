@@ -1,35 +1,27 @@
 {
-  "date": "2026-10-25",
-  "quote": "Clarity is not found by waiting for certainty; it is built through steady, honest iteration.",
+  "date": "2026-10-26",
+  "quote": "Clarity is not found by waiting for certainty; it is built through steady, deliberate contact with the problem.",
   "psychology": {
-    "title": "The Peak-End Rule in Learning Motivation",
-    "explanation": "The peak-end rule is a cognitive heuristic described in psychological research showing that people tend to judge an experience largely based on how it felt at its peak (the most intense point) and at its end, rather than on the total sum or average of every moment.\n\nIn rigorous academic prep, long study sessions often conclude in cognitive exhaustion or frustration from hitting an impasse on a difficult problem. When a study block ends on a note of defeat, your working memory encodes the entire three-hour block as punishing and unpleasant.\n\nOver days and weeks, this negative emotional tag generates anticipatory dread. You begin to delay opening your textbooks not because the material is impossible, but because your brain anticipates the unpleasant exit state from the previous session.",
-    "example": "You spend two productive hours deriving frequency responses, but spend the final 30 minutes stuck on an intricate stability criterion until you shut your laptop in frustration. The next day, you feel strong resistance to starting your revision.",
-    "exercise": "End study blocks by design, not by collapse. Reserve the final 7–10 minutes of every session to step back from raw problem-solving. Review two concepts you understood well, organize your notes, and write down the exact starting point for tomorrow."
+    "title": "Implementation Intentions: Bridging the Intention-Action Gap",
+    "explanation": "Most students assume that inconsistent study habits stem from a lack of willpower or motivation. However, psychological research emphasizes the 'intention-behavior gap'—the persistent divide between what we genuinely intend to do and the actions we actually take when the moment arrives.\n\nPsychologist Peter Gollwitzer's research into 'implementation intentions' demonstrates that framing goals around exact situational triggers drastically improves execution. Instead of setting an open-ended goal such as 'I will practice Signals and Systems tonight,' you link an anticipated cue directly to an action: 'If situation X happens, then I will execute action Y.'\n\nThis explicit linkage transfers the burden of initiating action from conscious willpower to environmental cues. When the pre-selected condition appears, your cognitive friction drops because the decision on what, when, and where to act has already been made.",
+    "real_life_example": "You intend to solve GATE practice problems after your college classes end, but usually end up scrolling through your phone until the evening is lost. By defining an exact trigger—'If I set my college backpack down at 5:30 PM, then I will immediately sit at my desk and open my notebook to convolution integrals'—the action becomes tied to a concrete event rather than your transient mood.",
+    "exercise": "Write down two specific 'If-Then' statements for your tasks today: one to initiate your primary technical study block, and one to counter a common distraction (e.g., 'If I feel the urge to open a social media app during revision, then I will write down the current formula on paper and take one full breath')."
   },
   "charisma_drill": {
-    "drill": "The Clarifying Restatement",
-    "description": "Before presenting your viewpoint or solution in a technical discussion, restate the other person's core idea in one concise sentence to ensure alignment.",
-    "sample_line": "It sounds like your main concern with this topology is the thermal budget rather than the board area—did I catch that correctly?",
-    "reflection_question": "Did taking five seconds to confirm their perspective reduce friction and invite more constructive dialogue?"
+    "exercise": "Active Verification Before Response",
+    "sample_line": "Before I add my thoughts, let me make sure I caught yours: you're saying the main challenge in this lab setup is the ADC sampling jitter rather than the amplifier gain, right?",
+    "reflection_question": "Did summarizing the speaker's core point before replying change the tone of the exchange from competitive to collaborative?"
   },
   "briefing": {
-    "topic": "Graceful Degradation vs. Catastrophic Failure",
-    "insight": "In dependable electronics and communications systems, designs favor graceful degradation: when a subsystem fails or bandwidth drops, the system reduces functionality smoothly instead of suffering a complete outage. Engineering students often apply a brittle, binary model to their daily habits—treating an interrupted morning or an unread chapter as justification to discard the rest of the day.",
-    "takeaway": "Design a 'low-power mode' for your study plan. On days packed with lab exams or exhaustion, drop to a non-negotiable minimum (such as 25 minutes of core formula derivation) rather than allowing a total operational collapse."
+    "insight": "In communications engineering, increasing transmitter power yields diminishing returns if the channel is overwhelmed by thermal noise and interference; the sounder design principle is often to narrow bandwidth to what is strictly necessary and filter out background noise. In personal productivity, students often attempt to 'boost transmitter power'—brute-forcing more hours while sitting in an environment saturated with notifications, open browser tabs, and poorly scoped objectives.",
+    "practical_takeaway": "Improve your cognitive signal-to-noise ratio by eliminating environmental noise before adding study hours: silence all devices, work in single-window full-screen mode, and write down the single concept you intend to master in that specific block."
   },
   "gate_pyq": {
     "title": "Verified GATE PYQ not configured",
     "explanation": "Add a real question and official answer-key source to data/pyqs.json. The system deliberately will not fabricate an official PYQ.",
     "official_source_url": ""
   },
-  "weekly_review": [
-    "Which ECE topic felt solid this week, and which concept still relies on superficial memorization rather than first-principles understanding?",
-    "Did you maintain consistent daily study minimums, or did unexpected schedule changes cause complete drop-offs?",
-    "In your lab or team discussions, did you prioritize clear, respectful listening before advocating your own technical ideas?",
-    "Did you structure your study sessions to end on a resolved, organized note, or did you work until burnout?",
-    "What is the single highest-leverage adjustment you need to make to your environment or schedule for the upcoming week?"
-  ],
-  "generated_at_utc": "2026-10-25T06:12:08.875971+00:00",
+  "weekly_review": "",
+  "generated_at_utc": "2026-10-26T06:19:43.029619+00:00",
   "model": "gemini-3.8-flash"
 }
