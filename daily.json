@@ -1,29 +1,34 @@
 {
-  "date": "2026-10-31",
-  "quote": "Mastery is not the absence of friction, but the steady habit of working through it.",
+  "date": "2026-11-08",
+  "quote": "Precision in thought brings calmness in action; mastery begins when you stop rushing the fundamentals.",
   "psychology": {
-    "title": "Implementation Intentions: Bridging the Intention-Action Gap",
-    "explanation": "We frequently set broad intentions, such as planning to study signals and systems after class, only to find our resolve drained by evening fatigue or minor distractions. Cognitive psychology identifies this chronic mismatch as the intention-behavior gap.\n\nAn implementation intention addresses this vulnerability through structured planning: 'If [situation X happens], then I will [perform response Y].' Rather than relying on willpower in the moment, you establish a direct associative link between a specific contextual cue and an action ahead of time.\n\nEmpirical research indicates that pre-deciding the exact time, place, and trigger creates cognitive readiness. When the anticipated scenario occurs, the intended behavior initiates with less conscious deliberation and lower mental friction.",
-    "real_life_example": "Instead of telling yourself, 'I need to practice network theory tonight,' you specify: 'If it is 6:00 PM and I return to my study table, then I will solve three KCL/KVL numerical problems before opening any messaging apps.'",
-    "exercise": "Identify one study task you have been putting off this week. Draft a precise 'If-Then' statement defining the exact environmental trigger and your immediate next micro-action."
+    "title": "Learned Optimism and Explanatory Styles",
+    "explanation": "When faced with academic setbacks—such as poor test scores or difficult technical concepts—our internal dialogue automatically constructs an explanation. Psychologist Martin Seligman identified three core dimensions to these explanatory styles: permanence (is the cause temporary or enduring?), pervasiveness (does it affect everything or just one specific domain?), and personalization (is it entirely an innate flaw or dependent on context and strategy?).\n\nA pessimistic explanatory style views failure as permanent ('I will never understand electromagnetic fields'), pervasive ('I am terrible at engineering'), and personal ('I just lack the intelligence'). This habit leads to learned helplessness, prompting students to withdraw effort even when targeted practice could easily bridge the gap.\n\nIn contrast, an optimistic explanatory style frames setbacks as temporary ('This chapter requires another pass'), specific ('My difficulty is strictly with vector calculus boundary conditions, not all of physics'), and controllable ('I need a structured set of solved examples, not a different brain'). This evidence-informed reframing preserves cognitive stamina and drives objective problem-solving.",
+    "real_life_example": "After scoring low on a Signals and Systems quiz, instead of concluding 'I cannot handle transform theory,' an ECE student recognizes: 'I made algebraic errors under time pressure during the inverse Z-transform questions. Drilling five timed problems daily will fix this.'",
+    "exercise": "Identify one frustration from this past week. Write down your default explanation, check if you framed it as permanent or pervasive, and rewrite it as a temporary, specific, and actionable challenge."
   },
   "charisma_drill": {
-    "title": "The Clarifying Echo",
-    "drill": "In your next conversation or project discussion, resist the urge to immediately offer your counterpoint. Instead, briefly summarize the speaker's core message to confirm understanding before sharing your view.",
-    "sample_line": "If I heard you correctly, your primary concern with this approach is the circuit's thermal stability under load. Did I capture that accurately?",
-    "reflection_question": "Did taking a moment to confirm their intent help de-escalate tension and create a more collaborative discussion?"
+    "title": "The Paraphrase-and-Validate Technique",
+    "exercise": "During a technical discussion or group study session, pause before offering your own counterpoint or solution. Restate the other person's core idea in your own words to verify your understanding before continuing.",
+    "sample_line": "If I am understanding your approach correctly, you are suggesting we analyze this circuit using nodal analysis to keep the matrix size smaller. Did I capture your reasoning right?",
+    "reflection_question": "Did summarizing their view reduce defensive tension and clarify the technical problem faster?"
   },
   "briefing": {
-    "title": "Graceful Degradation: Preserving Core Function Under Stress",
-    "insight": "In hardware and systems engineering, graceful degradation refers to designing an architecture so that under heavy load, fault conditions, or power limitations, it sheds non-essential features while maintaining core operations rather than suffering total failure. Human cognitive capacity operates under similar constraints. During rigorous academic periods like semester exams or intensive GATE prep, an all-or-nothing mindset often leads students to abandon their routine entirely when unexpected disruptions occur. Establishing a predefined baseline—a 'low-power mode' where you protect a bare-minimum 30 minutes of foundational practice—preserves momentum and prevents catastrophic lapses in discipline.",
-    "takeaway": "Design a non-negotiable minimum baseline routine so that even on your most chaotic days, essential progress continues."
+    "insight": "Second-order thinking is critical in both system engineering and daily planning. In analog design, solving a first-order problem—such as adding a bypass capacitor to filter high-frequency noise—can introduce second-order consequences, such as parasitic inductance resonance or high inrush current. In study routines, pulling an all-nighter delivers the first-order result of finishing an assignment, but creates second-order deficits: disrupted memory consolidation, reduced attentional control, and low retention during problem practice over the next two days. Robust decision-making always evaluates the immediate result alongside the subsequent system state.",
+    "practical_takeaway": "Before adopting an aggressive study schedule or sudden routine shift, ask: 'What are the downstream effects on my cognitive recovery 48 hours from now?'"
   },
   "gate_pyq": {
     "title": "Verified GATE PYQ not configured",
     "explanation": "Add a real question and official answer-key source to data/pyqs.json. The system deliberately will not fabricate an official PYQ.",
     "official_source_url": ""
   },
-  "weekly_review": "",
-  "generated_at_utc": "2026-10-31T07:01:54.723932+00:00",
+  "weekly_review": [
+    "1. Which core ECE concept challenged you the most this week, and what specific step did you take to break it down?",
+    "2. How consistently did you maintain uninterrupted deep-work blocks versus allowing fragmented multitasking?",
+    "3. When communicating with peers or faculty, did you listen to understand or merely wait for your turn to speak?",
+    "4. What recurring category of mistake (conceptual gap, misreading questions, or calculation error) showed up most in your practice problems?",
+    "5. What is the single highest-priority topic or habit you need to lock in during the upcoming week?"
+  ],
+  "generated_at_utc": "2026-11-08T07:26:16.469386+00:00",
   "model": "gemini-3.8-flash"
 }
